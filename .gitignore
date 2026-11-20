@@ -13,6 +13,9 @@ dist/
 build/
 client/dist/
 
+# Deployment scripts with keys
+deploy-render.ps1
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

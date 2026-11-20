@@ -6,6 +6,8 @@ node_modules/
 # Environment variables & secrets
 .env
 .env.*
+*.env
+atlas-credentials*
 !.env.example
 
 # Production build artifacts

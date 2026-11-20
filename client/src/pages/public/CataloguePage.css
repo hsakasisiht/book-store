@@ -1,0 +1,153 @@
+/* ==========================================================================
+   BRIVON CATALOGUE PAGE
+   ========================================================================== */
+
+.catalogue-page {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-20);
+}
+
+.catalogue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.catalogue-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--color-text-heading);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.catalogue-subtitle {
+  font-size: 1.05rem;
+  color: var(--brivon-text-secondary);
+  max-width: 600px;
+}
+
+.catalogue-count-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--brivon-surface-1);
+  border: 1px solid var(--color-border);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brivon-lime);
+}
+
+[data-theme="light"] .catalogue-count-badge {
+  background-color: #FFFFFF;
+  color: #0A0B0E;
+  border-color: rgba(10, 11, 14, 0.15);
+  box-shadow: 0 2px 8px rgba(10, 11, 14, 0.04);
+}
+
+.count-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--brivon-lime);
+  box-shadow: 0 0 8px var(--brivon-lime);
+}
+
+[data-theme="light"] .count-dot {
+  background-color: #0A0B0E;
+  box-shadow: none;
+}
+
+/* Catalogue Grid */
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: var(--space-6);
+}
+
+.catalogue-grid-skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Empty State */
+.catalogue-empty-state {
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 640px;
+  margin: var(--space-12) auto;
+}
+
+.empty-mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--brivon-lime);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--brivon-lime-border);
+}
+
+[data-theme="light"] .empty-mono-tag {
+  background-color: var(--brivon-lime);
+  color: #0A0B0E;
+  border-color: var(--brivon-lime);
+  font-weight: 800;
+}
+
+.catalogue-empty-state h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 850;
+  color: var(--color-text-heading);
+}
+
+.catalogue-empty-state p {
+  color: var(--brivon-text-secondary);
+  font-size: 0.95rem;
+  max-width: 440px;
+}
+
+/* Pagination */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-indicator-mono {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--brivon-text-secondary);
+}
+
+.page-indicator-mono strong {
+  color: var(--brivon-lime);
+}
+
+[data-theme="light"] .page-indicator-mono strong {
+  color: #0A0B0E;
+  font-weight: 800;
+}

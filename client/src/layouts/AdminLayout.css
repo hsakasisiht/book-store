@@ -1,0 +1,233 @@
+/* ==========================================================================
+   BRIVON ADMIN DESK LAYOUT
+   ========================================================================== */
+
+.brivon-admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+/* Mobile Header */
+.admin-mobile-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background-color: var(--brivon-surface-1);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.admin-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--color-text-heading);
+}
+
+.admin-pill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background-color: var(--brivon-lime);
+  color: #0A0B0E;
+}
+
+.admin-mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-menu-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.brivon-admin-sidebar {
+  width: 280px;
+  background-color: var(--brivon-surface-1);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+.sidebar-brand-block {
+  padding: var(--space-8) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.brivon-admin-nav {
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--brivon-text-secondary);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.admin-nav-item:hover {
+  background-color: var(--brivon-surface-subdued);
+  color: var(--color-text);
+}
+
+.admin-nav-item.nav-active {
+  background-color: var(--brivon-lime);
+  color: #0A0B0E;
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+.nav-mono-index {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.sidebar-bottom-actions {
+  padding: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-sidebar-logout {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brivon-rose);
+  padding: 8px 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Main Area */
+.brivon-admin-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brivon-admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--brivon-surface-1);
+}
+
+.topbar-desk-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brivon-lime);
+}
+
+[data-theme="light"] .topbar-desk-label {
+  color: #0A0B0E;
+  font-weight: 800;
+}
+
+.topbar-user-cluster {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.operator-name {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--brivon-text-muted);
+}
+
+.operator-name strong {
+  color: var(--color-text);
+}
+
+.brivon-admin-content {
+  padding: var(--space-8);
+  flex-grow: 1;
+}
+
+@media (max-width: 992px) {
+  .brivon-admin-wrapper {
+    flex-direction: column;
+  }
+
+  .admin-mobile-header {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .brivon-admin-sidebar {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  .brivon-admin-sidebar.sidebar-open {
+    display: flex;
+  }
+
+  .brivon-admin-topbar {
+    display: none;
+  }
+
+  .brivon-admin-content {
+    padding: var(--space-5) var(--space-4);
+  }
+}

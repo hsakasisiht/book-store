@@ -1,0 +1,144 @@
+/* ==========================================================================
+   BRIVON DESIGN TOKENS — BESPOKE EDITORIAL STUDIO ARCHIVE SYSTEM
+   Dual-Theme Engine: Carbon Dark & Editorial Light Gallery System
+   ========================================================================== */
+
+:root {
+  /* Brand Core (Carbon Dark Default) */
+  --brivon-lime: #CCFF00;
+  --brivon-lime-hover: #D8FF33;
+  --brivon-lime-subtle: rgba(204, 255, 0, 0.08);
+  --brivon-lime-border: rgba(204, 255, 0, 0.35);
+  --brivon-lime-glow: rgba(204, 255, 0, 0.25);
+
+  /* Neutrals & Surfaces (Dark) */
+  --brivon-obsidian: #0A0B0E;
+  --brivon-surface-1: #111216;
+  --brivon-surface-2: #17181F;
+  --brivon-surface-3: #20222B;
+  --brivon-surface-subdued: #14151B;
+  --brivon-surface-hover: #1E202A;
+
+  /* Wire & Hairline Borders (Dark) */
+  --brivon-border: rgba(255, 255, 255, 0.08);
+  --brivon-border-medium: rgba(255, 255, 255, 0.14);
+  --brivon-border-strong: rgba(255, 255, 255, 0.24);
+
+  /* Typography Colors (Dark) */
+  --brivon-text-primary: #FFFFFF;
+  --brivon-text-secondary: #9E9EA8;
+  --brivon-text-muted: #6E6E78;
+  --brivon-text-dim: #454550;
+
+  /* Functional Status */
+  --brivon-emerald: #10B981;
+  --brivon-emerald-subtle: rgba(16, 185, 129, 0.12);
+  --brivon-rose: #EF4444;
+  --brivon-rose-subtle: rgba(239, 68, 68, 0.12);
+
+  /* Typography Stack */
+  --font-display: 'Syne', -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+
+  /* Geometry & Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --shadow-lime: 0 0 30px rgba(204, 255, 0, 0.3);
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Semantic Framework Mappings */
+  --color-brand-primary: var(--brivon-lime);
+  --color-brand-secondary: var(--brivon-obsidian);
+  --color-lime: var(--brivon-lime);
+  --color-background: var(--brivon-obsidian);
+  --color-surface: var(--brivon-surface-1);
+  --color-surface-subdued: var(--brivon-surface-subdued);
+  --color-surface-hover: var(--brivon-surface-hover);
+  --color-border: var(--brivon-border);
+  --color-border-hover: var(--brivon-lime-border);
+  --color-text: var(--brivon-text-primary);
+  --color-text-heading: var(--brivon-text-primary);
+  --color-muted: var(--brivon-text-secondary);
+  --radius-full: var(--radius-pill);
+  --radius-card: var(--radius-xl);
+  --radius-button: var(--radius-pill);
+}
+
+/* ==========================================================================
+   LIGHT MODE STUDIO OVERRIDES (EDITORIAL GALLERY / SWISS NEWSPRINT)
+   ========================================================================== */
+[data-theme="light"] {
+  /* Brand Core in Light Mode */
+  --brivon-lime: #CCFF00;
+  --brivon-lime-hover: #B8E600;
+  --brivon-lime-subtle: rgba(204, 255, 0, 0.25);
+  --brivon-lime-border: rgba(10, 11, 14, 0.2);
+  --brivon-lime-glow: rgba(204, 255, 0, 0.4);
+
+  /* Light Editorial Gallery Surfaces */
+  --brivon-obsidian: #F7F7F9;
+  --brivon-surface-1: #FFFFFF;
+  --brivon-surface-2: #F1F1F4;
+  --brivon-surface-3: #E6E6EB;
+  --brivon-surface-subdued: #EFEFF3;
+  --brivon-surface-hover: #E8E8ED;
+
+  /* Wire & Hairline Dark Borders (Crisp & High-Contrast) */
+  --brivon-border: rgba(10, 11, 14, 0.1);
+  --brivon-border-medium: rgba(10, 11, 14, 0.18);
+  --brivon-border-strong: rgba(10, 11, 14, 0.32);
+
+  /* High-Legibility Dark Typography */
+  --brivon-text-primary: #0A0B0E;
+  --brivon-text-secondary: #363640;
+  --brivon-text-muted: #5E5E6C;
+  --brivon-text-dim: #8E8E98;
+
+  /* Status Colors */
+  --brivon-emerald: #059669;
+  --brivon-emerald-subtle: rgba(5, 150, 105, 0.12);
+  --brivon-rose: #DC2626;
+  --brivon-rose-subtle: rgba(220, 38, 38, 0.12);
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(10, 11, 14, 0.05);
+  --shadow-elevated: 0 12px 40px rgba(10, 11, 14, 0.08);
+
+  /* Semantic Framework Mappings */
+  --color-brand-primary: var(--brivon-lime);
+  --color-brand-secondary: #0A0B0E;
+  --color-lime: var(--brivon-lime);
+  --color-background: var(--brivon-obsidian);
+  --color-surface: var(--brivon-surface-1);
+  --color-surface-subdued: var(--brivon-surface-subdued);
+  --color-surface-hover: var(--brivon-surface-hover);
+  --color-border: var(--brivon-border);
+  --color-border-hover: var(--brivon-border-strong);
+  --color-text: var(--brivon-text-primary);
+  --color-text-heading: var(--brivon-text-primary);
+  --color-muted: var(--brivon-text-secondary);
+}

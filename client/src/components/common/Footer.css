@@ -1,0 +1,159 @@
+/* ==========================================================================
+   BRIVON FOOTER
+   ========================================================================== */
+
+.brivon-footer {
+  background-color: var(--brivon-surface-1);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-20) 0 var(--space-10);
+  margin-top: var(--space-24);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="light"] .brivon-footer {
+  background-color: #EFEFF3;
+  border-top-color: rgba(10, 11, 14, 0.12);
+}
+
+.footer-headline-block {
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-12);
+}
+
+.footer-big-statement {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text-heading);
+  max-width: 900px;
+}
+
+.lime-highlight {
+  color: var(--brivon-lime);
+}
+
+[data-theme="light"] .lime-highlight {
+  background-color: var(--brivon-lime);
+  color: #0A0B0E;
+  padding: 2px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 4px 16px rgba(204, 255, 0, 0.4);
+  line-height: 1.05;
+}
+
+/* 4-Col Grid */
+.footer-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: var(--space-8);
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.brand-col .brivon-mark {
+  margin-bottom: var(--space-3);
+}
+
+.footer-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--color-text-heading);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.footer-bio {
+  color: var(--brivon-text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 320px;
+  margin-bottom: var(--space-4);
+}
+
+.footer-city-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.city-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  color: var(--brivon-lime);
+  background-color: var(--brivon-surface-subdued);
+}
+
+[data-theme="light"] .city-pill {
+  color: #0A0B0E;
+  background-color: var(--brivon-lime);
+  border-color: var(--brivon-lime);
+  font-weight: 800;
+}
+
+.footer-heading {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brivon-lime);
+  margin-bottom: var(--space-4);
+}
+
+[data-theme="light"] .footer-heading {
+  color: #0A0B0E;
+  font-weight: 800;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a, .footer-static-item {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--brivon-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-text);
+}
+
+.footer-static-item {
+  color: var(--brivon-text-muted);
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-8);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--brivon-text-muted);
+}
+
+.footer-subtext-mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--brivon-text-dim);
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,137 @@
+/* ==========================================================================
+   BRIVON ADMIN BOOKS PAGE
+   ========================================================================== */
+
+.admin-books-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-books-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admin-page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--color-text-heading);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.admin-books-header .subtitle {
+  color: var(--brivon-text-secondary);
+  font-size: 0.95rem;
+}
+
+.table-thumb {
+  width: 44px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-xs);
+  background-color: #050608;
+}
+
+.table-subtext-mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--brivon-text-muted);
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-delete {
+  background-color: transparent;
+  color: var(--brivon-rose);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  font-family: var(--font-mono);
+}
+
+.btn-delete:hover {
+  background-color: var(--brivon-rose);
+  color: #FFFFFF;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 11, 14, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: var(--space-4);
+  backdrop-filter: blur(12px);
+}
+
+.modal-content {
+  background-color: var(--brivon-surface-1);
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-elevated);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-4);
+}
+
+.modal-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 850;
+  color: var(--color-text-heading);
+  text-transform: uppercase;
+}
+
+.modal-close {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--brivon-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--brivon-rose);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.admin-loading-card {
+  text-align: center;
+  padding: var(--space-12);
+  background-color: var(--brivon-surface-1);
+}

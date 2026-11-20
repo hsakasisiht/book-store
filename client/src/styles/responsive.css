@@ -1,0 +1,105 @@
+/* ==========================================================================
+   BRIVON RESPONSIVE SYSTEM
+   Breakpoints: 1200px (Desktop), 992px (Tablet Land), 768px (Tablet Port), 576px (Mobile)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .hero-grid {
+    grid-template-columns: 1fr 480px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-10) !important;
+  }
+
+  .hero-showcase-wrapper {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .site-header .main-nav {
+    display: none;
+  }
+
+  .site-header .main-nav.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 74px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-background);
+    padding: var(--space-8) var(--space-6);
+    gap: var(--space-4);
+    z-index: 1000;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .mobile-toggle {
+    display: inline-flex !important;
+  }
+
+  .footer-editorial-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--space-8) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogue-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  }
+
+  .detail-split-layout {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-8) !important;
+  }
+
+  .cart-layout, .checkout-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-layout-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-sidebar {
+    position: static !important;
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .footer-editorial-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-headline {
+    font-size: 3.2rem !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-ticker {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .editorial-table th, .editorial-table td {
+    padding: 12px 14px;
+  }
+}

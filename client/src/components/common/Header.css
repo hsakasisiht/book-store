@@ -1,0 +1,208 @@
+/* ==========================================================================
+   BRIVON HEADER COMPONENT
+   ========================================================================== */
+
+.brivon-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(10, 11, 14, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="light"] .brivon-header {
+  background-color: rgba(247, 247, 249, 0.94);
+  border-bottom-color: rgba(10, 11, 14, 0.1);
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  gap: var(--space-6);
+}
+
+/* Brand Lockup */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brivon-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--brivon-lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(204, 255, 0, 0.35);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-lockup:hover .brivon-mark {
+  transform: scale(1.05);
+}
+
+.aperture-core {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: #0A0B0E;
+}
+
+.brand-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--color-text-heading);
+  line-height: 1;
+}
+
+.brand-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--brivon-lime);
+  margin-top: 2px;
+}
+
+[data-theme="light"] .brand-tagline {
+  color: #0A0B0E;
+  background-color: var(--brivon-lime);
+  padding: 1px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  width: fit-content;
+  font-weight: 800;
+}
+
+/* Navigation Links */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.nav-item {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brivon-text-secondary);
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: var(--color-text);
+}
+
+.nav-item.nav-active {
+  color: var(--color-text);
+}
+
+.nav-item.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--brivon-lime);
+  box-shadow: 0 0 10px var(--brivon-lime);
+}
+
+[data-theme="light"] .nav-item.nav-active::after {
+  background-color: #0A0B0E;
+  box-shadow: none;
+  height: 2.5px;
+}
+
+.nav-counter {
+  color: var(--brivon-lime);
+  font-weight: 700;
+}
+
+[data-theme="light"] .nav-counter {
+  color: #0A0B0E;
+  background-color: var(--brivon-lime);
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.nav-logout-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brivon-rose);
+  cursor: pointer;
+  padding: 6px 0;
+  transition: opacity 0.2s ease;
+}
+
+.nav-logout-btn:hover {
+  opacity: 0.8;
+}
+
+/* Header Right Actions */
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.btn-header-cta {
+  padding: 10px 22px;
+  font-size: 0.82rem;
+}
+
+.mobile-only-action {
+  display: none;
+  margin-top: var(--space-4);
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--brivon-surface-subdued);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.burger-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: all 0.2s ease;
+}

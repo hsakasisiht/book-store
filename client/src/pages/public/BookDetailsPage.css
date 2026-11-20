@@ -1,0 +1,376 @@
+/* ==========================================================================
+   BRIVON BOOK DETAILS PAGE
+   ========================================================================== */
+
+.book-details-page {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-20);
+}
+
+.brivon-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brivon-text-muted);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.brivon-breadcrumbs a:hover {
+  color: var(--brivon-lime);
+}
+
+.brivon-breadcrumbs .sep {
+  color: var(--brivon-lime);
+}
+
+[data-theme="light"] .brivon-breadcrumbs a:hover {
+  color: #0A0B0E;
+}
+
+[data-theme="light"] .brivon-breadcrumbs .sep {
+  color: #0A0B0E;
+  font-weight: 800;
+}
+
+.brivon-breadcrumbs .active-leaf {
+  color: var(--color-text);
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Split Layout */
+.detail-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-12);
+  padding: var(--space-10);
+  background-color: var(--brivon-surface-1);
+}
+
+/* Media Column */
+.detail-media-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.detail-image-plate {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #050608;
+  border: 1px solid var(--color-border);
+  height: 520px;
+}
+
+.detail-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-tag-featured {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--brivon-lime);
+  color: #0A0B0E;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.06em;
+}
+
+.detail-watermark-tag {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: rgba(10, 11, 14, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+}
+
+[data-theme="light"] .detail-watermark-tag {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-color: rgba(10, 11, 14, 0.15);
+  color: #0A0B0E;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+
+/* Specifications Sheet */
+.archival-specs-sheet {
+  background-color: var(--brivon-surface-subdued);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+[data-theme="light"] .archival-specs-sheet {
+  background-color: #F8F8FA;
+  border-color: rgba(10, 11, 14, 0.1);
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.spec-label {
+  color: var(--brivon-text-muted);
+  letter-spacing: 0.08em;
+}
+
+.spec-val {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* Info Column */
+.detail-info-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-volume-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--color-text-heading);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: var(--space-2);
+}
+
+.detail-volume-author {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--brivon-text-secondary);
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-6);
+}
+
+.detail-volume-author strong {
+  color: var(--brivon-lime);
+}
+
+[data-theme="light"] .detail-volume-author strong {
+  color: #0A0B0E;
+}
+
+.detail-pricing-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-6);
+}
+
+.detail-price-text {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.detail-inventory-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.detail-inventory-badge.in-stock {
+  color: var(--brivon-emerald);
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.detail-inventory-badge.depleted {
+  color: var(--brivon-rose);
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.inventory-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Synopsis */
+.detail-synopsis-box {
+  margin-bottom: var(--space-8);
+}
+
+.synopsis-heading {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--brivon-lime);
+  margin-bottom: var(--space-2);
+}
+
+[data-theme="light"] .synopsis-heading {
+  color: #0A0B0E;
+  font-weight: 800;
+}
+
+.synopsis-prose {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--brivon-text-secondary);
+}
+
+/* Action Cluster */
+.detail-action-cluster {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background-color: var(--brivon-surface-subdued);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+[data-theme="light"] .detail-action-cluster {
+  background-color: #FFFFFF;
+  border-color: rgba(10, 11, 14, 0.1);
+  box-shadow: 0 4px 16px rgba(10, 11, 14, 0.04);
+}
+
+.quantity-selector-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qty-label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--brivon-text-secondary);
+}
+
+.brivon-qty-dropdown {
+  background-color: var(--brivon-surface-1);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-add-bag-full {
+  width: 100%;
+  padding: 16px;
+  font-size: 0.95rem;
+}
+
+.btn-price-addon {
+  color: #0A0B0E;
+  font-family: var(--font-mono);
+}
+
+.bag-feedback-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--brivon-emerald);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bag-link-underline {
+  color: var(--brivon-lime);
+  text-decoration: underline;
+}
+
+[data-theme="light"] .bag-link-underline {
+  color: #0A0B0E;
+  font-weight: 800;
+}
+
+/* Fulfillment Guarantee */
+.fulfillment-guarantee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--brivon-text-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.g-bullet {
+  color: var(--brivon-lime);
+}
+
+[data-theme="light"] .g-bullet {
+  color: #0A0B0E;
+}
+
+/* Empty / Error */
+.details-not-found-card {
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  max-width: 580px;
+  margin: var(--space-12) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   BRIVON THEME TOGGLE
+   ========================================================================== */
+
+.brivon-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--brivon-surface-subdued);
+  border: 1px solid var(--color-border);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.brivon-theme-toggle:hover {
+  border-color: var(--brivon-lime);
+  background-color: var(--brivon-surface-hover);
+}
+
+[data-theme="light"] .brivon-theme-toggle {
+  background-color: #FFFFFF;
+  border-color: rgba(10, 11, 14, 0.18);
+  box-shadow: 0 2px 8px rgba(10, 11, 14, 0.05);
+}
+
+[data-theme="light"] .brivon-theme-toggle:hover {
+  background-color: #F0F0F4;
+  border-color: #0A0B0E;
+}
+
+.toggle-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brivon-lime);
+  box-shadow: 0 0 8px var(--brivon-lime);
+}
+
+[data-theme="light"] .toggle-dot {
+  background-color: #0A0B0E;
+  box-shadow: none;
+}
+
+.toggle-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+[data-theme="light"] .toggle-text {
+  color: #0A0B0E;
+  font-weight: 800;
+}
+
+.brivon-theme-toggle.compact {
+  padding: 6px 10px;
+}

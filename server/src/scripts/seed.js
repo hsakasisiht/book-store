@@ -1,9 +1,16 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import dns from 'node:dns';
 import { Category } from '../models/Category.js';
 import { Book } from '../models/Book.js';
 import { User } from '../models/User.js';
 import { initialCategories, initialBooks } from '../utils/seedData.js';
+
+try {
+  dns.setServers(['8.8.8.8', '1.1.1.1']);
+} catch {
+  // Ignore fallback errors
+}
 
 dotenv.config();
 
